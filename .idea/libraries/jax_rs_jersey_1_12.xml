@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="jax-rs-jersey-1.12" type="JAX-RS">
+    <properties version="jersey-1.12" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/comresrcgen-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/asm-3.3.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/FastInfoset-1.2.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/activation-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jackson-xc-1.9.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jackson-jaxrs-1.9.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jackson-core-asl-1.9.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jaxb-api-2.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/grizzly-servlet-webserver-1.9.45.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jackson-mapper-asl-1.9.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jdom-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jaxb-impl-2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jersey-client-1.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jersey-grizzly-1.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jersey-multipart-1.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jaxb-xjc-2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jersey-core-1.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jersey-bundle-1.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/localizer-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/jettison-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/persistence-api-1.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/mimepull-1.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/stax-api-1.0-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/wadl-cmdline-1.1.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/rome-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/wadl-core-1.1.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8-ea03/mail-1.4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
