@@ -1,76 +1,74 @@
 # coursesclient3
 
-**Getting the class in Clojure.**
-
-[Converting between clojure data structures and java collections](https://www.niwi.nz/2013/10/13/converting-between-clojure-data-structures-and-java-collections/)
-A Clojure version of the courses client Java and Scala programs.
-
-**Here is the problem I am seeing.**
-
-/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:46741,suspend=y,server=n -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar:/home/algotrader/coursesclient3/target/classes:/home/algotrader/coursesclient3/lib/clojure-1.8.0.jar:/home/algotrader/coursesclient3/lib/javax.json.jar:/home/algotrader/coursesclient3/lib/hibernate-validator-cdi-5.0.1.Final.jar:/home/algotrader/coursesclient3/lib/validation-api-1.1.0.Final.jar:/home/algotrader/coursesclient3/lib/hibernate-validator-annotation-processor-5.0.1.Final.jar:/home/algotrader/coursesclient3/lib/hibernate-validator-5.0.1.Final.jar:/home/algotrader/coursesclient3/lib/jboss-logging-3.1.1.GA.jar:/home/algotrader/coursesclient3/lib/classmate-0.8.0.jar:/home/algotrader/coursesclient3/lib/javax.el-api-2.2.4.jar:/home/algotrader/.m2/repository/com/sun/jersey/jersey-client/1.19.3/jersey-client-1.19.3.jar:/home/algotrader/.m2/repository/com/sun/jersey/jersey-core/1.19.3/jersey-core-1.19.3.jar:/home/algotrader/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar:/home/algotrader/.m2/repository/com/sun/jersey/jersey-json/1.18.1/jersey-json-1.18.1.jar:/home/algotrader/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/home/algotrader/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/home/algotrader/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/algotrader/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/algotrader/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/home/algotrader/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.7.8/jackson-databind-2.7.8.jar:/home/algotrader/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.jar:/home/algotrader/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.7.8/jackson-core-2.7.8.jar:/home/algotrader/.m2/repository/org/mortbay/jetty/jetty-util/6.1.25/jetty-util-6.1.25.jar:/home/algotrader/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/home/algotrader/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/home/algotrader/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/home/algotrader/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar:/home/algotrader/.m2/repository/org/scala-lang/scala-library/2.12.2/scala-library-2.12.2.jar:/home/algotrader/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar:/home/algotrader/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/171.4249.39/lib/idea_rt.jar edu.webdev.CoursesClientRequest
-Connected to the target VM, address: '127.0.0.1:46741', transport: 'socket'
-13:01:46.257 [main] INFO  edu.webdev.CoursesClientRequest - Starting the test client
-Class Path is /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar:/home/algotrader/coursesclient3/target/classes:/home/algotrader/coursesclient3/lib/clojure-1.8.0.jar:/home/algotrader/coursesclient3/lib/javax.json.jar:/home/algotrader/coursesclient3/lib/hibernate-validator-cdi-5.0.1.Final.jar:/home/algotrader/coursesclient3/lib/validation-api-1.1.0.Final.jar:/home/algotrader/coursesclient3/lib/hibernate-validator-annotation-processor-5.0.1.Final.jar:/home/algotrader/coursesclient3/lib/hibernate-validator-5.0.1.Final.jar:/home/algotrader/coursesclient3/lib/jboss-logging-3.1.1.GA.jar:/home/algotrader/coursesclient3/lib/classmate-0.8.0.jar:/home/algotrader/coursesclient3/lib/javax.el-api-2.2.4.jar:/home/algotrader/.m2/repository/com/sun/jersey/jersey-client/1.19.3/jersey-client-1.19.3.jar:/home/algotrader/.m2/repository/com/sun/jersey/jersey-core/1.19.3/jersey-core-1.19.3.jar:/home/algotrader/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar:/home/algotrader/.m2/repository/com/sun/jersey/jersey-json/1.18.1/jersey-json-1.18.1.jar:/home/algotrader/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/home/algotrader/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/home/algotrader/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/home/algotrader/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/home/algotrader/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/home/algotrader/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/home/algotrader/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.7.8/jackson-databind-2.7.8.jar:/home/algotrader/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.jar:/home/algotrader/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.7.8/jackson-core-2.7.8.jar:/home/algotrader/.m2/repository/org/mortbay/jetty/jetty-util/6.1.25/jetty-util-6.1.25.jar:/home/algotrader/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/home/algotrader/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/home/algotrader/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/home/algotrader/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar:/home/algotrader/.m2/repository/org/scala-lang/scala-library/2.12.2/scala-library-2.12.2.jar:/home/algotrader/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar:/home/algotrader/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/171.4249.39/lib/idea_rt.jar
-13:01:50.975 [main] INFO  CoursesClientRequest - curl 'http://localhost:3000/courses/area/Cs' -H 'Content-Type: application/json'
-curl 'http://localhost:3000/courses/area/Cs' -H 'Content-Type: application/json'
-13:01:50.976 [main] DEBUG CoursesClientRequest - arguments: /area/CS com.sun.jersey.api.client.Client@57dc9128
-13:01:50.978 [main] DEBUG CoursesClientRequest - webresource: http://localhost:3000/courses/area/CS
-13:01:50.980 [main] DEBUG CoursesClientRequest - builder: com.sun.jersey.api.client.WebResource$Builder@36b6964d
-Jun 23, 2017 1:01:51 PM com.sun.jersey.api.client.ClientResponse getEntity
-SEVERE: A message body reader for Java class java.lang.Class, and Java type class java.lang.Class, and MIME media type application/json; charset=utf-8 was not found
-Jun 23, 2017 1:01:51 PM com.sun.jersey.api.client.ClientResponse getEntity
-SEVERE: The registered message body readers compatible with the MIME media type are:
-*/* ->
-  com.sun.jersey.core.impl.provider.entity.FormProvider
-  com.sun.jersey.core.impl.provider.entity.StringProvider
-  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
-  com.sun.jersey.core.impl.provider.entity.FileProvider
-  com.sun.jersey.core.impl.provider.entity.InputStreamProvider
-  com.sun.jersey.core.impl.provider.entity.DataSourceProvider
-  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
-  com.sun.jersey.core.impl.provider.entity.ReaderProvider
-  com.sun.jersey.core.impl.provider.entity.DocumentProvider
-  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader
-  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader
-  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader
-  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
-  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
-  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General
-  com.sun.jersey.core.impl.provider.entity.EntityHolderReader
-
-com.sun.jersey.api.client.ClientHandlerException: A message body reader for Java class java.lang.Class, and Java type class java.lang.Class, and MIME media type application/json; charset=utf-8 was not found
-	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:630)
-	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586)
-	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:686)
-	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
-	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at clojure.lang.Reflector.invokeMatchingMethod(Reflector.java:93)
-	at clojure.lang.Reflector.invokeInstanceMethod(Reflector.java:28)
-	at src.edu.webdev.CoursesClientRequest$sendGetRequest.invokeStatic(CoursesClientRequest.clj:31)
-	at src.edu.webdev.CoursesClientRequest$sendGetRequest.invoke(CoursesClientRequest.clj:18)
-	at src.edu.webdev.CoursesClientRequest$doCoursesClientRequest$fn__13.invoke(CoursesClientRequest.clj:56)
-	at src.edu.webdev.CoursesClientRequest$doCoursesClientRequest.invokeStatic(CoursesClientRequest.clj:53)
-	at src.edu.webdev.CoursesClientRequest$doCoursesClientRequest.invoke(CoursesClientRequest.clj:47)
-	at clojure.lang.Var.invoke(Var.java:379)
-	at edu.webdev.CoursesClientRequest.invokeMethod(CoursesClientRequest.java:25)
-	at edu.webdev.CoursesClientRequest.main(CoursesClientRequest.java:33)
-could not send: A message body reader for Java class java.lang.Class, and Java type class java.lang.Class, and MIME media type application/json; charset=utf-8 was not found
-AOK All gets have been executed
-Disconnected from the target VM, address: '127.0.0.1:46741', transport: 'socket'
-
-Process finished with exit code 0
-
 **Possibly Relevant Webpages**
+
+_Why Clojure_
+
+[Why Clojure over other JVM Lisps: Kawa, Armed Bear or SISC?](https://stackoverflow.com/questions/1413390/why-clojure-over-other-jvm-lisps-kawa-armed-bear-or-sisc)
+
+_Other JVM LISP Implementations_
+
+[The Kawa Scheme Language](https://www.gnu.org/software/kawa/)
+
+_Clojure Overview_
+
+[Clojure: Lisp meets Java, with a side of Erlang](http://radar.oreilly.com/2011/06/clojure-java-lisp-jvm.html)
+
+[Clojure Programming Language](https://clojure.org/)
+
+[Differences with other Lisps](https://clojure.org/reference/lisps)
+
+[Clojure 1.8 Cheat Sheet (v38)](https://clojure.org/api/cheatsheet)
+
+[Downloadable Clojure reference manual](https://stackoverflow.com/questions/6981622/downloadable-clojure-reference-manual)
+
+
+
+_Clojure with Maven_
 
 [How to use Maven to build Clojure code](http://alexott.net/en/clojure/ClojureMaven.html)
 
+[Why using Maven for Clojure builds is a no-brainer](https://cemerick.com/2010/03/25/why-using-maven-for-clojure-builds-is-a-no-brainer/)
+
+[talios/clojure-maven-plugin](https://github.com/talios/clojure-maven-plugin)
+
+_IDE and Tools_
+
+I found two Intellij plugins: Cursive and Closure-Kit. Neither seems to work correctly with the current version of intellij.
+ 
+Thus I cannot consider this problem to be a true assignment. It is better just to take a look at the pom.xml, CoursesClientRequest.java, and CoursesClientRequest.clj to see what I did to get Java and Closure to interoperate.
+
+I will spend sometime later to get these plugins to work properly. (Maybe someone has already done the work, and I just did not find the correct plugins by googling.)
+
+Getting these plugins to work is important because there is probably a great deal of usefulness in Clojure for NLP, medical software engineering, financial software engineering, and legal software engineering.
+
+I chose the Cursive plugin, which worked better than Closure-Kt.
+
+Then I created the Clojure module and from there I created the src.edu.webdev.CoursesClientRequest.clj namespace.
+
+The (ns) sexpr maps the Clojure namespace to a Java class.
+
+It seems to be necessary to mark Intellij (test) sources root manually.
+
+Breakpoints currently don't seem to work properly.
+
+The builtin editor seems to misbehave. I edited with emacs and let Intellij automatically discover modifications of .clj files.
+
+Because I am creating executable JARs, it was important to make sure the run/debug configuration specified JAR application.
+
+Intellij seems to have been slow in discovering changes to Clojure modules.
+
+I tended to use maven lifecyle clean and build Clojure modules manually (there was only one) and then invoke maven lifecyle install.
+
+The red error indicator appears in the upper right corner of the s.e.w.CourseClientRequest window because the Clojure parser seems unable to distinguish between a Java method named get and the Clojure/core get function. This error indicator does not prevent compilation.
+
 [Introduction to Cursive, the Clojure IDE Built on IntelliJ](http://yusizhang.github.io/blog/2015/10/07/the-clojure-ide-cursive-in-intellij)
 
+_Java (and probably Scala) Clojure Interoperability_
+
 [Clojure - convert list into Java array](https://stackoverflow.com/questions/16647261/clojure-convert-list-into-java-array)
+
+_JSON-Jersey in Clojure (and Otherwise)_
 
 [Jersey Exception : SEVERE: A message body reader for Java class](https://stackoverflow.com/questions/8594707/jersey-exception-severe-a-message-body-reader-for-java-class)
 
@@ -87,3 +85,92 @@ Process finished with exit code 0
 [Dropwizard error messages from Jersey](https://stackoverflow.com/questions/26138516/dropwizard-error-messages-from-jersey)
 
 [Missing message body reader in dropwizard 0.7 resource tests](https://stackoverflow.com/questions/23422701/missing-message-body-reader-in-dropwizard-0-7-resource-tests)
+
+[How to Create RESTful Java Client With Jersey Client – Example](https://crunchify.com/how-to-create-restful-java-client-with-jersey-client-example/)
+
+[How to build RESTful Service with Java using JAX-RS and Jersey (Example)](https://crunchify.com/how-to-build-restful-service-with-java-using-jax-rs-and-jersey/)
+
+
+**Specific Issues**
+
+_Getting the class in Clojure._
+
+Clojure does not have the equivalent of Java ".class", but the class function (comparable to Scala classOf) can be applied to a Java object.
+
+_Clojure versus GenericType_
+
+There is nothing like the following in Clojure.
+````
+    new GenericType<List<String>>() {}
+````
+Thus I had to pass the above as a Java object to the Clojure functions.
+````
+    public void invokeMethod() {
+        // clojure.core ns is read by default -- get require
+        // then read edu.webdev.clojure.CoursesClientRequest
+        IFn require = Clojure.var( "clojure.core", "require" );
+        require.invoke( Clojure.read( "src.edu.webdev.CoursesClientRequest" ) );
+        // Invoke foo method in src.edu.webdev.edu.CoursesClientRequest.clj
+        IFn foo = Clojure.var( "src.edu.webdev.CoursesClientRequest", "doCoursesClientRequest" );
+        foo.invoke( "AOK", new GenericType<List<String>>() {} );
+    }
+````
+I'm not sure the namespace definition (ns) code is exactly correct, but the program seems to work.
+````
+(ns src.edu.webdev.CoursesClientRequest
+  (:gen-class
+    :name CoursesClientRequest
+    :methods [#^{:static true} [doCoursesClientRequest [String] Void]]))
+````
+Note that the accept method below takes a variable number of arguments.
+
+Checkout how I pass the argument to it in the following function definition.
+````
+(defn sendGetRequest
+  [s me log gtls]
+  (if (not (nil? s))
+    (do
+      (. log (debug "arguments: {} {}" s (. me (toString))))
+      (. log (debug "webresource: {}" (.. me
+                                          (resource (str applicationServiceURI s))
+                                          (toString))))
+      (. log (debug "builder: {}" (.. (. me (resource (str applicationServiceURI s)))
+                                      (accept (into-array (list "application/json")))
+                                      (toString))))
+      (try
+        (let [webResource (. me (resource (str applicationServiceURI s)))
+              response (.. webResource
+                           (accept (into-array (list "application/json")))
+                           (get com.sun.jersey.api.client.ClientResponse))]
+          (if (not (== (. response (getStatus)) 200))
+            (throw (new RuntimeException
+                        (str "Failed : HTTP error code : "
+                             (. response (getStatus))))))
+          ; note post-fix . instead of new
+          (println (into [] (java.util.ArrayList.
+                              (. response (getEntity gtls))))))
+        (catch Exception e (. e (printStackTrace)) (println (str "could not send: " (.getMessage e))))))
+    (throw (new RuntimeException "Bad URI"))))
+````
+The various Java JSON reading and decoding libraries depend on constructs like GenericType above. It really does not fit very well with culture. It might be worthwhile to create a pure Clojure library to implement JAX-RS and Jersey clients without invoking methods from Java JARs.  
+
+_Java Clojure Interoperability_
+
+[Java Interop](https://clojure.org/reference/java_interop)
+
+[Converting between clojure data structures and java collections](https://www.niwi.nz/2013/10/13/converting-between-clojure-data-structures-and-java-collections/)
+
+[Converting Clojure data structures to Java collections](https://stackoverflow.com/questions/4313505/converting-clojure-data-structures-to-java-collections)
+
+[into list vs. into vector in Clojure](https://stackoverflow.com/questions/32936052/into-list-vs-into-vector-in-clojure)
+
+[How to pass a typed collection from clojure to java?](https://stackoverflow.com/questions/3688730/how-to-pass-a-typed-collection-from-clojure-to-java)
+
+[into-array](https://clojuredocs.org/clojure.core/into-array)
+
+[to-array](https://clojuredocs.org/clojure.core/to-array)
+
+[Clojure - convert list into Java array](https://stackoverflow.com/questions/16647261/clojure-convert-list-into-java-array)
+
+
+

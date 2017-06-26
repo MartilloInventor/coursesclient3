@@ -42,9 +42,6 @@
         (catch Exception e (. e (printStackTrace)) (println (str "could not send: " (.getMessage e))))))
     (throw (new RuntimeException "Bad URI"))))
 
-
-
-
 (defn doCoursesClientRequest
   "Does client initialization, then executes http requests"
   [x gtls]
