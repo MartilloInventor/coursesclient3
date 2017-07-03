@@ -1,5 +1,10 @@
 # coursesclient3
 
+Some more relevant info about the Clojure environment is found in ClojureDiscussion.pdf, in which some questions were answered on the [Cursive Mailing List](https://groups.google.com/forum/#!forum/cursive) about mixed language Clojure programming and the use of the Intellij Cursive plugin.
+
+Two other mailing lists useful for Clojure programming are [Clojure](https://groups.google.com/forum/#!forum/clojure) and [Clojure Dev](https://groups.google.com/forum/#!forum/clojure-dev)
+
+
 **Possibly Relevant Webpages**
 
 _Why Clojure_
@@ -21,7 +26,6 @@ _Clojure Overview_
 [Clojure 1.8 Cheat Sheet (v38)](https://clojure.org/api/cheatsheet)
 
 [Downloadable Clojure reference manual](https://stackoverflow.com/questions/6981622/downloadable-clojure-reference-manual)
-
 
 
 _Clojure with Maven_
